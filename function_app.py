@@ -21,7 +21,7 @@ def predict(req: func.HttpRequest) -> func.HttpResponse:
             MonthlyCharges = float(monthly),
             TechSupport_yes = float(techsupport)
         )
-        return func.HttpResponse(f"Hello, the prediction that the customer will churn is: {prediction.1%}. This HTTP triggered function executed successfully.")
+        return func.HttpResponse(f"Hello, the prediction that the customer will churn is: {prediction:.2f}. This HTTP triggered function executed successfully.")
     else:
         return func.HttpResponse(
              "This HTTP triggered function executed successfully. Pass a tenure, monthly, techsupport in the query string or in the request body for a personalized response.",
